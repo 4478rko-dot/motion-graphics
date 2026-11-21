@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>تصميم مبادرة وقفية | جمعية ديمومة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1f3a4d; --teal:#1f7a6c; --gold:#e6ad3c; --ink:#3c4a55; --muted:#6b7680;
+  --cream:#f8f6f0; --mint:#e4f1ee; --sand:#f8e9c3; --card:#fffdf8; --line:#ebe3d0;
+  --tint:#e5f2ee; --beige:#f2eadb;
+}
+@page{size:1280px 720px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#ddd}
+body{font-family:"Tajawal",sans-serif;color:var(--ink)}
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;background:var(--cream);
+  padding:56px 84px 0;page-break-after:always;break-after:page;margin:0 auto 20px}
+@media print{.slide{margin:0}}
+.slide.mint{background:var(--mint)} .slide.sand{background:var(--sand)}
+.slide.hero{background:linear-gradient(135deg,#fbf3df 0%,#f8f6f0 50%,#e7f1ee 100%);padding:0}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;height:52px}
+.eyebrow{display:flex;align-items:center;gap:12px;font:700 18px "Tajawal";color:var(--teal)}
+.badge{background:var(--gold);color:var(--navy);font:800 15px "Tajawal";padding:6px 16px;border-radius:99px}
+.logo{height:56px;display:block}
+h1{font:700 50px/1.25 "Readex Pro";color:var(--navy);margin:14px 0 24px}
+
+/* footer */
+.foot{position:absolute;bottom:22px;right:84px;left:84px;display:flex;justify-content:space-between;
+  font:500 14px "Tajawal";color:var(--muted);border-top:1px solid rgba(31,58,77,.08);padding-top:10px}
+.foot b{color:var(--teal);font-weight:700}
+.foot span{white-space:nowrap}
+
+/* cards */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)} .g5{grid-template-columns:repeat(5,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 24px;
+  box-shadow:0 6px 18px rgba(31,58,77,.05)}
+.card.tint{background:var(--tint);border-color:#c9e1da}
+.card.beige{background:var(--beige)}
+.card.gold{background:var(--sand);border-color:#ecd593}
+.card.hl{border:1.5px solid var(--teal);background:var(--tint)}
+.num{font:700 15px "Readex Pro";color:var(--teal);margin-bottom:4px}
+.ct{font:700 23px/1.4 "Readex Pro";color:var(--navy)}
+.cd{font:400 19px/1.65 "Tajawal";color:var(--ink);margin-top:4px}
+.lbl{font:800 16px "Tajawal";color:var(--teal);margin-bottom:6px}
+.ico{width:34px;height:34px;stroke:var(--teal);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:10px;display:block}
+.note{margin-top:20px;background:var(--sand);border:1px solid #ecd593;border-radius:20px;padding:20px 26px;
+  font:800 20px/1.6 "Tajawal";color:var(--navy)}
+.note.tint{background:var(--tint);border-color:#c9e1da}
+.note small{display:block;font:400 18px "Tajawal";color:var(--ink);margin-top:4px}
+.dot{width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);display:inline-flex;
+  align-items:center;justify-content:center;font:700 18px "Readex Pro";flex:none}
+.rows{display:flex;flex-direction:column;gap:12px}
+.row{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);
+  border-radius:16px;padding:10px 18px;font:500 20px "Tajawal";color:var(--navy)}
+.row.gold{background:var(--sand);border-color:#ecd593;font-weight:800}
+.pill{background:var(--tint);color:var(--teal);font:800 16px "Tajawal";border-radius:12px;padding:8px 0;width:180px;text-align:center;flex:none}
+.pill.beige{background:var(--beige);color:var(--navy)}
+.arrow{width:80px;height:34px;flex:none;fill:var(--gold)}
+.arrow path{fill:var(--gold)}
+.chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.chip{border:1px solid #c9e1da;background:var(--tint);color:var(--teal);font:800 16px "Tajawal";border-radius:99px;padding:8px 20px}
+ul.b{list-style:none;margin-top:8px}
+ul.b li{font:400 19px/1.75 "Tajawal";position:relative;padding-right:20px}
+ul.b li::before{content:"";position:absolute;right:2px;top:.75em;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.big{font:700 72px/1 "Readex Pro";color:var(--teal)}
+.qa{background:var(--tint);border-radius:12px;padding:12px 16px;margin-top:16px;font:800 17px/1.6 "Tajawal";color:var(--teal)}
+.circle{position:absolute;border-radius:50%}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+ <defs>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M3 21h18M6 17V9M10 17V5M14 17v-6M18 17V8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M8 3v4M16 3v4M7 15l3-3 3 2 4-4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"/><path d="M8 12c1-1 2-1 3 0s2 1 3 0 2-1 2-1"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.2a5 5 0 0 1 5.5 5.8"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.1 2.1 0 0 1-3-3l9.4-9.4a4 4 0 0 0-2-6.3l-2.3 2.3 1 2.3z"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-9-2v15c4 0 7 .5 9 2 2-1.5 5-2 9-2V4c-4 0-7 .5-9 2zM12 6v15"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2.5l2.4 1.8 3-.2.9 2.9 2.5 1.7-1 2.8 1 2.8-2.5 1.7-.9 2.9-3-.2L12 21.5l-2.4-1.8-3 .2-.9-2.9-2.5-1.7 1-2.8-1-2.8 2.5-1.7.9-2.9 3 .2z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3zM10 11l2 2 2-2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="arr" viewBox="0 0 80 34"><path d="M0 17 26 2v9h54v12H26v9z"/></symbol>
+ </defs>
+</svg>
+
+<!-- 1 COVER -->
+<section class="slide hero">
+  <div class="circle" style="width:440px;height:440px;background:#cfe5df;opacity:.75;left:60px;top:80px"></div>
+  <div class="circle" style="width:380px;height:380px;background:#f5dc9a;opacity:.7;left:260px;top:290px"></div>
+  <div class="circle" style="width:200px;height:200px;background:#c8e1da;left:40px;top:430px"></div>
+  <div class="circle" style="width:170px;height:170px;background:#fffdf8;left:225px;top:245px;box-shadow:0 10px 30px rgba(31,58,77,.12);display:flex;align-items:center;justify-content:center">
+    <svg class="ico" style="width:72px;height:72px;margin:0"><use href="#i-bulb"/></svg></div>
+  <img class="logo" src="daymoma-logo.png" alt="جمعية ديمومة" style="position:absolute;top:44px;right:84px;height:78px">
+  <div style="position:absolute;right:84px;top:170px;width:640px">
+    <div style="font:700 20px 'Tajawal';color:var(--teal)">برنامج سفراء الأوقاف | طلاب المنح بجامعة نجران</div>
+    <div style="font:700 86px/1.15 'Readex Pro';color:var(--navy);margin:10px 0 14px">تصميم مبادرة وقفية</div>
+    <div style="font:400 27px/1.6 'Tajawal';color:var(--ink)">من احتياج المجتمع إلى فكرة وقفية قابلة للتنفيذ،<br>ومن الفكرة إلى أثر مستدام.</div>
+    <div style="display:flex;align-items:center;gap:18px;margin-top:30px">
+      <span style="font:700 20px 'Tajawal';color:var(--navy)">تقديم: محمد القرني</span>
+      <span class="badge" style="font-size:17px">لقاء تفاعلي تطبيقي</span>
+    </div>
+    <div style="margin-top:34px;padding-top:16px;border-top:1px solid rgba(31,58,77,.15);font:500 18px/1.7 'Tajawal';color:var(--ink)">
+      تنظيم: <b style="color:var(--teal)">جمعية ديمومة لخدمة الأوقاف بمنطقة نجران</b><br>
+      موجَّه لطلاب المنح بجامعة نجران</div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">خريطة اللقاء</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>ستة أسئلة نخرج منها بمبادرة</h1>
+  <div class="grid g3">
+    <div class="card"><div class="num">01</div><div class="ct">ما المبادرة الوقفية؟</div><div class="cd">معناها وحدودها</div></div>
+    <div class="card"><div class="num">02</div><div class="ct">لماذا نطلقها؟</div><div class="cd">أهدافها واحتياجها</div></div>
+    <div class="card"><div class="num">03</div><div class="ct">كيف نقيس الاحتياج؟</div><div class="cd">أدلة محلية موثوقة</div></div>
+    <div class="card"><div class="num">04</div><div class="ct">كيف نصممها؟</div><div class="cd">فكرة وأهداف قابلة للقياس</div></div>
+    <div class="card"><div class="num">05</div><div class="ct">كيف نفعّلها؟</div><div class="cd">خطة وشراكات وتجربة</div></div>
+    <div class="card"><div class="num">06</div><div class="ct">ما الأدوات المطلوبة؟</div><div class="cd">حقيبة بالورقة والقلم</div></div>
+  </div>
+  <div class="note">ما نخرج به اليوم: بطاقة مبادرة مكتوبة بأيديكم، بلا شاشات.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>2</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide sand">
+  <div class="top"><div class="eyebrow">افتتاح <span class="badge">نشاط 1 · دقيقة</span></div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>حين ينقطع العمل.. يبقى الوقف</h1>
+  <div class="card" style="border-right:6px solid var(--teal)">
+    <div style="font:500 28px/1.7 'Tajawal';color:var(--navy)">«إذا مات الإنسان انقطع عنه عمله إلا من ثلاثة: صدقة جارية، وعلم يُنتفع به، وولد صالح يدعو له»</div>
+    <div style="font:400 16px 'Tajawal';color:var(--muted);margin-top:6px">رواه مسلم</div>
+  </div>
+  <div class="card tint" style="margin-top:20px">
+    <div class="lbl">السؤال المحوري</div>
+    <div class="ct" style="font-size:27px">إذا عدت إلى بلدك غدًا، فما القضية التي تتمنى أن يُسهم الوقف في معالجتها؟</div>
+    <div class="cd">اكتبها في سطر واحد على ورقتك، بلا هاتف وبلا ذكاء اصطناعي.</div>
+  </div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>3</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">المفهوم · 1</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>ما الوقف؟ حبس الأصل وتسبيل الثمرة</h1>
+  <div style="display:flex;align-items:center;gap:22px">
+    <div class="card" style="flex:1"><svg class="ico"><use href="#i-home"/></svg><div class="ct">الأصل</div><div class="cd">عقار أو أرض أو بئر… يبقى قائمًا، فلا يُباع ولا يُوهب ولا يُورَّث.</div></div>
+    <svg class="arrow"><use href="#arr"/></svg>
+    <div class="card tint" style="flex:1"><svg class="ico"><use href="#i-bars"/></svg><div class="ct">الثمرة (الريع)</div><div class="cd">غلّته وعوائده تُصرف في وجوه الخير المحددة.</div></div>
+  </div>
+  <div class="note">مثال: عمارة وقفية تُؤجَّر؛ فيبقى المبنى، ويُموَّل من إيجارها تعليم الطلاب وعلاج المرضى.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>4</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">المفهوم · 1</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>ما المبادرة الوقفية؟</h1>
+  <div class="card" style="font:500 23px/1.6 'Tajawal';color:var(--navy);padding:18px 26px">برنامج أو مشروع منظَّم يعالج احتياجًا مجتمعيًا محددًا، ويرتبط بالوقف عبر أحد أربعة مسارات:</div>
+  <div class="grid g4" style="margin-top:20px">
+    <div class="card"><svg class="ico"><use href="#i-chat"/></svg><div class="ct">ثقافة الوقف</div><div class="cd">نشر الوعي وتشجيع أوقاف جديدة.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-chart"/></svg><div class="ct">تنمية وقف</div><div class="cd">تطوير أصل وقفي ليصبح منتجًا ومستدامًا.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-bars"/></svg><div class="ct">ريع موجَّه</div><div class="cd">توجيه ريع وقف قائم إلى أولوية تنموية.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-home"/></svg><div class="ct">أصل جديد</div><div class="cd">إنشاء وقف جديد يخدم حاجة قائمة.</div></div>
+  </div>
+  <div class="note">الشرط: أن تُبيِّن المبادرة صلتها بالوقف، لا أن تكون نشاطًا خيريًا عابرًا.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>5</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">المفهوم · 1</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>صور الوقف التي تنطلق منها المبادرة</h1>
+  <div class="grid g4">
+    <div class="card"><svg class="ico"><use href="#i-users"/></svg><div class="ct">وقف جماعي</div><div class="cd">مساهمات صغيرة من كثيرين في وقف واحد.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-wrench"/></svg><div class="ct">وقف المنافع</div><div class="cd">منفعة محددة تُوقف للناس، كاستخدام مبنى أو أجهزة.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-db"/></svg><div class="ct">وقف نقدي</div><div class="cd">مال يُستثمر بطريقة مشروعة ويُصرف عائده.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-home"/></svg><div class="ct">وقف عقاري</div><div class="cd">أرض أو عمارة تُؤجَّر ويُصرف ريعها.</div></div>
+  </div>
+  <div class="note">اختر الصورة التي تناسب احتياجك وإمكاناتك، وتأكد من الأنظمة المعمول بها في بلدك.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>6</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">المفهوم · 1</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>عمل خيري مؤقت أم مبادرة وقفية؟</h1>
+  <div class="grid g2">
+    <div class="card hl"><div class="ct" style="color:var(--teal)">مبادرة وقفية</div>
+      <ul class="b"><li>يستمر الأثر ما دام الأصل قائمًا.</li><li>تُموَّل من ريع الأصل أو تنميته.</li><li>تستهدف سبب المشكلة لا ظاهرها.</li><li>سؤالها: كيف يستمر العمل بعد التمويل الأول؟</li></ul></div>
+    <div class="card beige"><div class="ct">نشاط خيري مؤقت</div>
+      <ul class="b"><li>ينتهي أثره بانتهاء التبرع.</li><li>يحتاج جمع تمويل متجددًا.</li><li>يعالج ظاهر المشكلة غالبًا.</li><li>سؤاله: ماذا نقدّم هذا الشهر؟</li></ul></div>
+  </div>
+  <div class="note">كل عمل وقفي خيري، لكن ليس كل عمل خيري وقفيًا.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>7</span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">المفهوم · 1 <span class="badge">نشاط 2 · رفع الأيدي</span></div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>هل هذه مبادرة وقفية؟</h1>
+  <div class="grid g3">
+    <div class="card"><div class="lbl">الحالة أ</div><div class="cd" style="margin:0">حملة لتوزيع سلال غذائية في شهر رمضان.</div>
+      <div class="qa">عمل خيري مؤقت، ويصبح وقفيًا إذا موَّله ريع وقف سنويًا.</div></div>
+    <div class="card"><div class="lbl">الحالة ب</div><div class="cd" style="margin:0">تخصيص ريع عمارة وقفية لتدريب الشباب على المهارات الرقمية.</div>
+      <div class="qa">مبادرة وقفية: ريع موجَّه إلى أولوية تنموية.</div></div>
+    <div class="card"><div class="lbl">الحالة ج</div><div class="cd" style="margin:0">حملة بين الطلاب لتشجيع أسرهم على إنشاء أوقاف صغيرة.</div>
+      <div class="qa">مبادرة وقفية: نشر ثقافة الوقف.</div></div>
+  </div>
+  <div class="note">صوّتوا برفع اليد، ثم ناقشوا: ما الذي يجعلها وقفية؟</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>8</span></div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">الأهداف · 2</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>لماذا نطلق مبادرة وقفية؟</h1>
+  <div style="display:flex;gap:22px;align-items:stretch">
+    <div class="rows" style="flex:1.75">
+      <div class="row"><span class="dot">1</span>وجود احتياج مجتمعي واضح لم تتم تلبيته.</div>
+      <div class="row"><span class="dot">2</span>معالجة مشكلة متكررة أو فجوة في الخدمات.</div>
+      <div class="row"><span class="dot">3</span>توجيه ريع الوقف إلى أولوية تنموية.</div>
+      <div class="row"><span class="dot">4</span>إحياء ثقافة الوقف وتشجيع أوقاف جديدة.</div>
+      <div class="row"><span class="dot">5</span>توظيف خبرات الشباب وشراكات المجتمع.</div>
+    </div>
+    <div class="card gold" style="flex:1"><svg class="ico"><use href="#i-bulb"/></svg><div class="ct">تذكّر</div><div class="cd">لا نصمم مبادرة لأن فكرتها جميلة فقط؛ بل لأن هناك احتياجًا حقيقيًا يستحق المعالجة.</div></div>
+  </div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>9</span></div>
+</section>
+
+<!-- 10 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">الاحتياج · 3</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>كيف نكتشف الاحتياج ونقيسه؟</h1>
+  <div class="grid g3">
+    <div class="card"><svg class="ico"><use href="#i-book"/></svg><div class="ct">راجع بيانات موثوقة</div><div class="cd">تقارير وإحصاءات محلية.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-users"/></svg><div class="ct">اسأل أهل الميدان</div><div class="cd">المستفيدون والعاملون فيه.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-globe"/></svg><div class="ct">حدّد الفئة والمكان</div><div class="cd">من المتأثر؟ وأين؟</div></div>
+    <div class="card"><svg class="ico"><use href="#i-badge"/></svg><div class="ct">وثّق المصدر</div><div class="cd">لكل معلومة مصدر وتاريخ.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-search"/></svg><div class="ct">اعرف الفجوة</div><div class="cd">ما الحلول القائمة؟ وما الذي لم يُعالَج؟</div></div>
+    <div class="card"><svg class="ico"><use href="#i-chat"/></svg><div class="ct">أجرِ مقابلة قصيرة</div><div class="cd">أو استبانة من أسئلة قليلة.</div></div>
+  </div>
+  <div class="note">قاعدة العمل: ابدأ بالاحتياج ثم ابحث عن الحل؛ لا تبدأ بالحل ثم تبحث له عن مشكلة.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>10</span></div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">الاحتياج · 3 <span class="badge">مثال توضيحي</span></div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>أداة: اسأل «لماذا؟» خمس مرات</h1>
+  <div class="rows">
+    <div class="row" style="margin-left:0"><span class="dot">1</span>شباب كثيرون لا يجدون عملًا.</div>
+    <div class="row" style="margin-left:40px"><span class="dot">2</span>لماذا؟ لأنهم لا يملكون مهارات رقمية.</div>
+    <div class="row" style="margin-left:80px"><span class="dot">3</span>لماذا؟ لأنه لا يوجد تدريب مجاني قريب منهم.</div>
+    <div class="row" style="margin-left:120px"><span class="dot">4</span>لماذا؟ لأن مراكز التدريب لا تجد تمويلًا مستدامًا.</div>
+    <div class="row gold" style="margin-left:160px"><span class="dot">5</span>هنا فرصة الوقف: ريع يموّل التدريب سنويًا.</div>
+  </div>
+  <div class="note tint">كرّر السؤال حتى تصل إلى السبب الذي يستطيع الوقف أن يعالجه.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>11</span></div>
+</section>
+
+<!-- 12 -->
+<section class="slide sand">
+  <div class="top"><div class="eyebrow">الاحتياج · 3 <span class="badge">نشاط 3 · 6 دقائق</span></div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>عصف ذهني: من الفرد إلى الفريق</h1>
+  <div class="grid g4">
+    <div class="card"><span class="dot">1</span><div class="ct" style="margin-top:14px">فرديًا</div><div class="lbl">دقيقتان</div><div class="cd">اكتب 3 مشكلات تراها في مجتمعك، بصمت.</div></div>
+    <div class="card"><span class="dot">2</span><div class="ct" style="margin-top:14px">مع زميل</div><div class="lbl">دقيقة</div><div class="cd">تبادلا الأوراق واختارا الأقوى.</div></div>
+    <div class="card"><span class="dot">3</span><div class="ct" style="margin-top:14px">فريق من ثلاثة</div><div class="lbl">دقيقتان</div><div class="cd">اتفقوا على مشكلة واحدة وسببها.</div></div>
+    <div class="card"><span class="dot">4</span><div class="ct" style="margin-top:14px">أمام الجميع</div><div class="lbl">دقيقة</div><div class="cd">كل فريق يعرض مشكلته في جملة واحدة.</div></div>
+  </div>
+  <div class="note tint">المسموح: الورقة والقلم والحوار. الممنوع: الهاتف والذكاء الاصطناعي. فكرتك أنت أولًا.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>12</span></div>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">التصميم · 4</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>كيف نصمم المبادرة الوقفية؟</h1>
+  <div class="grid g3">
+    <div class="card" style="display:flex;gap:16px;align-items:center"><svg class="ico" style="margin:0;flex:none"><use href="#i-star"/></svg><div class="ct">اسم واضح يعبّر عن الفكرة</div></div>
+    <div class="card" style="display:flex;gap:16px;align-items:center"><svg class="ico" style="margin:0;flex:none"><use href="#i-search"/></svg><div class="ct">مشكلة محددة وفئة معروفة</div></div>
+    <div class="card" style="display:flex;gap:16px;align-items:center"><svg class="ico" style="margin:0;flex:none"><use href="#i-check"/></svg><div class="ct">حل مختصر وواضح</div></div>
+    <div class="card" style="display:flex;gap:16px;align-items:center"><svg class="ico" style="margin:0;flex:none"><use href="#i-link"/></svg><div class="ct">صلة بالوقف: أصل، ريع، تنمية، ثقافة</div></div>
+    <div class="card" style="display:flex;gap:16px;align-items:center"><svg class="ico" style="margin:0;flex:none"><use href="#i-users"/></svg><div class="ct">موارد وشركاء ومدة أولية</div></div>
+    <div class="card" style="display:flex;gap:16px;align-items:center"><svg class="ico" style="margin:0;flex:none"><use href="#i-alert"/></svg><div class="ct">مخاطر متوقعة وطريقة التعامل معها</div></div>
+  </div>
+  <div class="note">تمييز مهم: المبادرة الوقفية ليست مجرد نشاط خيري مؤقت؛ بل يجب أن توضح كيف يرتبط عملها بالوقف أو بعوائده أو بتنمية ثقافته.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>13</span></div>
+</section>
+
+<!-- 14 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">التصميم · 4 <span class="badge">تحدٍّ سريع</span></div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>كيف نحدد أهداف المبادرة؟</h1>
+  <div style="display:flex;align-items:center;gap:22px">
+    <div class="card beige" style="flex:.8"><div class="lbl" style="color:var(--muted)">بدلًا من</div><div style="font:400 24px/1.6 'Tajawal';color:var(--ink)">«نساعد الشباب على التطور»</div></div>
+    <svg class="arrow"><use href="#arr"/></svg>
+    <div class="card" style="flex:1.4;border:1.5px solid var(--teal)"><div class="lbl">نكتب</div><div style="font:500 24px/1.6 'Tajawal';color:var(--navy)">تدريب 50 شابًا على مهارات رقمية خلال 3 أشهر، وإتمام 40 منهم متطلبات البرنامج.</div></div>
+  </div>
+  <div class="chips"><span class="chip">محدد</span><span class="chip">قابل للقياس</span><span class="chip">واقعي</span><span class="chip">بمدة زمنية</span><span class="chip">مرتبط بالاحتياج</span></div>
+  <div class="note">جرّبوا الآن (30 ثانية): أعيدوا كتابة «نرفع الوعي بالوقف بين الطلاب» بصيغة قابلة للقياس.
+    <small>اسأل نفسك: كيف سأعرف بالأرقام أن الهدف تحقق؟</small></div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>14</span></div>
+</section>
+
+<!-- 15 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">التفعيل · 4</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>كيف نفعّل المبادرة على أرض الواقع؟</h1>
+  <div class="grid g5" style="gap:16px">
+    <div class="card"><span class="dot">1</span><div class="ct" style="margin-top:14px">خطة تشغيلية</div><div class="cd">خطوات ومسؤوليات وجدول زمني.</div></div>
+    <div class="card"><span class="dot">2</span><div class="ct" style="margin-top:14px">ميزانية وموارد</div><div class="cd">ما المتاح وما المطلوب.</div></div>
+    <div class="card"><span class="dot">3</span><div class="ct" style="margin-top:14px">شراكات</div><div class="cd">جهات تكمّل خبرتكم.</div></div>
+    <div class="card"><span class="dot">4</span><div class="ct" style="margin-top:14px">تجربة محدودة</div><div class="cd">نبدأ صغيرًا ثم نتوسع.</div></div>
+    <div class="card"><span class="dot">5</span><div class="ct" style="margin-top:14px">تشغيل وصيانة</div><div class="cd">من يشرف؟ وكيف نتابع؟</div></div>
+  </div>
+  <div class="lbl" style="margin-top:22px;font-size:19px">فكّروا في الشراكة</div>
+  <div style="display:flex;align-items:center;gap:12px;font:800 20px 'Tajawal';color:var(--navy)">
+    <div class="card tint" style="flex:1;padding:16px 20px">فريقكم: الفكرة</div><span>+</span>
+    <div class="card tint" style="flex:1;padding:16px 20px">جمعية محلية: الخبرة</div><span>+</span>
+    <div class="card tint" style="flex:1;padding:16px 20px">الوقف: التمويل</div><span>=</span>
+    <div class="card gold" style="flex:1;padding:16px 20px">أثر متكامل</div>
+  </div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>15</span></div>
+</section>
+
+<!-- 16 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">القياس · 4</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>كيف نقيس أثر المبادرة؟</h1>
+  <div class="rows">
+    <div class="row"><span class="pill">المخرجات</span>ماذا نفذنا؟ وكم مستفيدًا وصلنا إليه؟</div>
+    <div class="row"><span class="pill">النتائج</span>ما الذي تغيّر لدى المستفيدين؟</div>
+    <div class="row"><span class="pill">الأثر</span>هل استمر التحسن؟ وهل عالجنا جزءًا من المشكلة؟</div>
+    <div class="row"><span class="pill beige">الكفاءة</span>ما الموارد التي استُخدمت مقابل النتائج؟</div>
+    <div class="row"><span class="pill beige">الاستدامة</span>كيف يستمر العمل بعد انتهاء التمويل الأولي؟</div>
+  </div>
+  <div class="note">ليس النجاح أن ننفذ المبادرة فحسب؛ بل أن نرى أثرًا حقيقيًا قابلًا للتحقق في حياة الناس.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>16</span></div>
+</section>
+
+<!-- 17 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">نموذج · 4 <span class="badge">مثال توضيحي</span></div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>بطاقة مبادرة وقفية مكتملة</h1>
+  <div class="grid g2" style="gap:14px 20px">
+    <div class="card" style="padding:16px 24px"><div class="lbl">المشكلة والفئة</div><div class="cd" style="margin:0">شباب الحي لا يجدون تدريبًا مجانيًا قريبًا منهم.</div></div>
+    <div class="card" style="padding:16px 24px"><div class="lbl">الاسم</div><div class="cd" style="margin:0">«مهارة»: تدريب الشباب على المهارات الرقمية.</div></div>
+    <div class="card" style="padding:16px 24px"><div class="lbl">الهدف</div><div class="cd" style="margin:0">تدريب 50 شابًا خلال 3 أشهر، وإتمام 40 منهم البرنامج.</div></div>
+    <div class="card" style="padding:16px 24px"><div class="lbl">الصلة بالوقف</div><div class="cd" style="margin:0">ريع مبنى وقفي يموّل التدريب كل عام.</div></div>
+    <div class="card" style="padding:16px 24px"><div class="lbl">الاستدامة</div><div class="cd" style="margin:0">تغطية التكلفة من ريع الوقف بعد التمويل الأول.</div></div>
+    <div class="card" style="padding:16px 24px"><div class="lbl">مؤشرا النتائج</div><div class="cd" style="margin:0">نسبة الإتمام، وعدد من حصلوا على فرصة عمل.</div></div>
+  </div>
+  <div class="note tint">بطاقتكم تُكتب بهذا الشكل: مختصرة، محددة، وقابلة للمناقشة.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>17</span></div>
+</section>
+
+<!-- 18 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">تجنّب · 4</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>أخطاء شائعة في المبادرات الوقفية</h1>
+  <div style="display:flex;justify-content:space-between;padding:0 18px 8px;font:800 16px 'Tajawal';color:var(--muted)"><span>الخطأ</span><span>البديل الصحيح</span></div>
+  <div class="rows">
+    <div class="row"><span style="flex:1">البدء بالحل قبل الاحتياج</span><svg class="arrow" style="width:60px;height:24px"><use href="#arr"/></svg><span style="flex:1;color:var(--teal);font-weight:800">ابدأ بدليل محلي على المشكلة.</span></div>
+    <div class="row"><span style="flex:1">أهداف عامة بلا أرقام</span><svg class="arrow" style="width:60px;height:24px"><use href="#arr"/></svg><span style="flex:1;color:var(--teal);font-weight:800">اكتب رقمًا ومدة زمنية.</span></div>
+    <div class="row"><span style="flex:1">نشاط خيري بلا صلة بالوقف</span><svg class="arrow" style="width:60px;height:24px"><use href="#arr"/></svg><span style="flex:1;color:var(--teal);font-weight:800">بيّن الأصل أو الريع أو الثقافة.</span></div>
+    <div class="row"><span style="flex:1">نسيان التشغيل والصيانة</span><svg class="arrow" style="width:60px;height:24px"><use href="#arr"/></svg><span style="flex:1;color:var(--teal);font-weight:800">حدّد من يتحمل التكلفة بعد السنة الأولى.</span></div>
+    <div class="row"><span style="flex:1">تجاهل أنظمة البلد</span><svg class="arrow" style="width:60px;height:24px"><use href="#arr"/></svg><span style="flex:1;color:var(--teal);font-weight:800">اعرف الجهة المخوَّلة بإدارة الوقف.</span></div>
+  </div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>18</span></div>
+</section>
+
+<!-- 19 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">الأدوات · 5</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>حقيبة أدوات مصمم المبادرة</h1>
+  <div class="grid g3">
+    <div class="card"><svg class="ico"><use href="#i-chat"/></svg><div class="ct">مقابلة واستبانة قصيرة</div><div class="cd">خمسة أسئلة تكفي للبداية.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-users"/></svg><div class="ct">خريطة أصحاب المصلحة</div><div class="cd">من المستفيد؟ ومن الشريك؟ ومن الجهة المخوَّلة؟</div></div>
+    <div class="card"><svg class="ico"><use href="#i-chart"/></svg><div class="ct">شجرة المشكلة</div><div class="cd">«لماذا؟» خمس مرات للوصول إلى السبب.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-book"/></svg><div class="ct">بطاقة المبادرة</div><div class="cd">صفحة واحدة تجمع كل ما سبق.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-bars"/></svg><div class="ct">جدول المؤشرات</div><div class="cd">مخرجات ونتائج وأثر لكل هدف.</div></div>
+    <div class="card"><svg class="ico"><use href="#i-check"/></svg><div class="ct">هدف قابل للقياس</div><div class="cd">رقم + فئة + مدة زمنية.</div></div>
+  </div>
+  <div class="note">كلها تعمل بالورقة والقلم: الفكرة قبل الأداة.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>19</span></div>
+</section>
+
+<!-- 20 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">نماذج · 5</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>نماذج واقعية نستفيد منها</h1>
+  <div class="grid g3">
+    <div class="card"><div class="lbl">تركيا</div><div class="ct">مشروعات آبار المياه لدى IHH</div><div class="cd">أعلنت المؤسسة افتتاح 1,009 آبار خلال 2025 في 18 دولة.</div>
+      <div class="qa">الدرس: تحديد الاحتياج، والتوزيع الجغرافي، والمتابعة والصيانة.</div></div>
+    <div class="card"><div class="lbl">ماليزيا</div><div class="ct">أرض وقف ستي عائشة</div><div class="cd">مشروع تطوير مشترك لأرض وقفية في بينانغ، يتضمن وحدات سكنية ومحالَّ تجارية.</div>
+      <div class="qa">الدرس: تطوير الأصل الوقفي ليصبح منتجًا.</div></div>
+    <div class="card"><div class="lbl">إندونيسيا</div><div class="ct">مستشفى البيت الصحي المتكامل</div><div class="cd">مستشفى وقفي تابع لمؤسسة دومبيت دوافا، بدأ عام 2012، ويعطي أولوية للخدمات الصحية المجانية للفئات المحتاجة.</div>
+      <div class="qa">الدرس: توظيف الوقف في خدمة صحية مستمرة.</div></div>
+  </div>
+  <div style="font:400 14px/1.6 'Tajawal';color:var(--muted);margin-top:14px">المصادر: تقرير IHH (12 يناير 2026)؛ مجلس الشؤون الإسلامية بولاية بينانغ؛ Dompet Dhuafa. تنبيه: مثال الآبار تنموي للاستلهام، وليس دليلًا على أن كل آبارها أوقاف.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>20</span></div>
+</section>
+
+<!-- 21 -->
+<section class="slide sand">
+  <div class="top"><div class="eyebrow">التطبيق · 5 <span class="badge">نشاط 4 · 3 دقائق</span></div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>التحدي: بطاقة المبادرة في جملة واحدة</h1>
+  <div class="card" style="font:400 28px/2 'Tajawal';color:var(--navy);padding:26px 30px">
+    نريد معالجة <b style="color:var(--teal)">[ المشكلة ]</b> لدى <b style="color:var(--teal)">[ الفئة ]</b> في <b style="color:var(--teal)">[ المكان ]</b>، عبر <b style="color:var(--teal)">[ الأصل الوقفي أو مصدر الريع ]</b>، وسنقيس النجاح بـ <b style="color:var(--teal)">[ رقم + مدة ]</b>.
+  </div>
+  <div class="grid g3" style="margin-top:20px;font:800 20px 'Tajawal';color:var(--navy)">
+    <div class="card tint" style="padding:16px 22px">بالورقة والقلم</div>
+    <div class="card tint" style="padding:16px 22px">بفريقكم الثلاثي</div>
+    <div class="card tint" style="padding:16px 22px">ثم نعرضها ونناقشها</div>
+  </div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>21</span></div>
+</section>
+
+<!-- 22 CLOSING -->
+<section class="slide hero">
+  <div class="circle" style="width:390px;height:390px;background:#cfe5df;opacity:.75;left:60px;top:105px"></div>
+  <div class="circle" style="width:290px;height:290px;background:#f5dc9a;opacity:.7;left:200px;top:345px"></div>
+  <img class="logo" src="daymoma-logo.png" alt="جمعية ديمومة" style="position:absolute;top:44px;right:84px;height:78px">
+  <div style="position:absolute;right:84px;top:190px;width:720px">
+    <div style="font:700 20px 'Tajawal';color:var(--teal)">خاتمة</div>
+    <div style="font:700 54px/1.35 'Readex Pro';color:var(--navy);margin:8px 0 14px">لا تنتظر أن تكون صاحب وقف كبير لتصنع أثرًا كبيرًا.</div>
+    <div style="font:800 32px/1.5 'Tajawal';color:var(--teal)">ابدأ بفكرة، وابنِ مبادرة، واصنع أثرًا يستمر.</div>
+    <div style="font:400 21px 'Tajawal';color:var(--ink);margin-top:18px">سفراء الأوقاف: من المعرفة إلى المبادرة، ومن المبادرة إلى الأثر.</div>
+    <div style="margin-top:28px;padding-top:14px;border-top:1px solid rgba(31,58,77,.15);font:500 18px 'Tajawal';color:var(--ink)">تنظيم: <b style="color:var(--teal)">جمعية ديمومة لخدمة الأوقاف بمنطقة نجران</b> · لطلاب المنح بجامعة نجران</div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">المشروع الوقفي</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>قواعد المشروع الوقفي</h1>
+  <div class="grid g3">
+    <div class="card"><div class="big">3</div><div class="cd" style="margin-top:12px">أشخاص فقط في كل مجموعة: لا يُقبل فريق يقل عن ثلاثة أو يزيد عليهم.</div></div>
+    <div class="card"><div class="big">1</div><div class="cd" style="margin-top:12px">مشروع وقفي واحد لكل مجموعة، مرتبط باحتياج حقيقي في بلدها أو مجتمعها.</div></div>
+    <div class="card"><svg class="ico" style="width:56px;height:56px"><use href="#i-badge"/></svg><div class="cd" style="margin-top:12px">تقييم من لجنة التحكيم للمجموعة وللأفراد، وعليه تُمنح الجوائز.</div></div>
+  </div>
+  <div class="note"><small style="margin:0 0 6px">يُحدَّد المستحق للجوائز وفق نتيجة التقييم والجلسة الاستشارية، مع النظر إلى فهم المبادرة وواقعيتها وقابلية تطويرها.</small>لا يعتمد التقييم على جمال العرض وحده، بل على قوة الاحتياج وجودة الفكرة وواقعية التنفيذ واستدامة الأثر.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>23</span></div>
+</section>
+
+<!-- 24 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">المشروع الوقفي</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>ماذا تقدّم كل مجموعة؟</h1>
+  <div class="grid g2" style="gap:14px 20px">
+    <div class="row" style="padding:14px 18px"><svg class="ico" style="margin:0;width:28px;height:28px;flex:none"><use href="#i-check"/></svg>وصف المشكلة والفئة المتأثرة بها.</div>
+    <div class="row" style="padding:14px 18px"><svg class="ico" style="margin:0;width:28px;height:28px;flex:none"><use href="#i-check"/></svg>اسم المبادرة والبلد والمنطقة المستهدفة.</div>
+    <div class="row" style="padding:14px 18px"><svg class="ico" style="margin:0;width:28px;height:28px;flex:none"><use href="#i-check"/></svg>مصدر كل دليل وتاريخ الحصول عليه.</div>
+    <div class="row" style="padding:14px 18px"><svg class="ico" style="margin:0;width:28px;height:28px;flex:none"><use href="#i-check"/></svg>دليلان محليان على الأقل يثبتان الاحتياج.</div>
+    <div class="row" style="padding:14px 18px"><svg class="ico" style="margin:0;width:28px;height:28px;flex:none"><use href="#i-check"/></svg>هدف عام و3 أهداف قابلة للقياس.</div>
+    <div class="row" style="padding:14px 18px"><svg class="ico" style="margin:0;width:28px;height:28px;flex:none"><use href="#i-check"/></svg>الحل المقترح وصلته بالوقف.</div>
+    <div class="row" style="padding:14px 18px"><svg class="ico" style="margin:0;width:28px;height:28px;flex:none"><use href="#i-check"/></svg>مؤشران لقياس النتائج وخطة لاستمرار الأثر.</div>
+    <div class="row" style="padding:14px 18px"><svg class="ico" style="margin:0;width:28px;height:28px;flex:none"><use href="#i-check"/></svg>خطة تنفيذ: أنشطة ومسؤوليات ومدة وموارد.</div>
+  </div>
+  <div class="note">مهم جدًا: لا يُطلب إنشاء وقف فعلي في هذا المشروع؛ المطلوب تصور أولي قابل للدراسة والتطوير، مع مراعاة الأنظمة في البلد.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>24</span></div>
+</section>
+
+<!-- 25 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">المشروع الوقفي <span class="badge">تُرسل للطلاب قبل البدء</span></div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>بطاقة تقييم المشروع الوقفي</h1>
+  <div class="rows" style="gap:10px">
+    <div class="row" style="padding:12px 22px"><span style="width:360px">وضوح الاحتياج ودقة تحديد المشكلة</span><span style="flex:1;height:14px;background:var(--beige);border-radius:9px;overflow:hidden"><i style="display:block;height:100%;width:100%;background:var(--gold);border-radius:9px"></i></span><b style="width:90px;text-align:left">20 درجة</b></div>
+    <div class="row" style="padding:12px 22px"><span style="width:360px">أصالة الفكرة وارتباطها بالوقف</span><span style="flex:1;height:14px;background:var(--beige);border-radius:9px;overflow:hidden"><i style="display:block;height:100%;width:100%;background:var(--gold);border-radius:9px"></i></span><b style="width:90px;text-align:left">20 درجة</b></div>
+    <div class="row" style="padding:12px 22px"><span style="width:360px">وضوح الأهداف وقابليتها للقياس</span><span style="flex:1;height:14px;background:var(--beige);border-radius:9px;overflow:hidden"><i style="display:block;height:100%;width:75%;background:var(--gold);border-radius:9px"></i></span><b style="width:90px;text-align:left">15 درجة</b></div>
+    <div class="row" style="padding:12px 22px"><span style="width:360px">واقعية خطة التنفيذ والإمكانات</span><span style="flex:1;height:14px;background:var(--beige);border-radius:9px;overflow:hidden"><i style="display:block;height:100%;width:75%;background:var(--gold);border-radius:9px"></i></span><b style="width:90px;text-align:left">15 درجة</b></div>
+    <div class="row" style="padding:12px 22px"><span style="width:360px">استدامة المبادرة وقياس أثرها</span><span style="flex:1;height:14px;background:var(--beige);border-radius:9px;overflow:hidden"><i style="display:block;height:100%;width:100%;background:var(--gold);border-radius:9px"></i></span><b style="width:90px;text-align:left">20 درجة</b></div>
+    <div class="row" style="padding:12px 22px"><span style="width:360px">جودة العرض والعمل الجماعي</span><span style="flex:1;height:14px;background:var(--beige);border-radius:9px;overflow:hidden"><i style="display:block;height:100%;width:50%;background:var(--gold);border-radius:9px"></i></span><b style="width:90px;text-align:left">10 درجات</b></div>
+  </div>
+  <div class="note" style="margin-top:16px">المجموع: 100 درجة. التقييم موحّد لجميع الفرق، ويُبنى على الأدلة لا على جمال العرض وحده.</div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>25</span></div>
+</section>
+
+<!-- 26 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">المشروع الوقفي</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>أسئلة قد تُطرح عليكم أمام اللجنة</h1>
+  <div class="grid g2" style="gap:14px 20px">
+    <div class="row" style="padding:16px 22px;font-weight:400">مع من تحدثتم؟ ومتى؟ وماذا أضافت المقابلة؟</div>
+    <div class="row" style="padding:16px 22px;font-weight:400">ما الفئة أو الحي الذي درستموه؟ وما دليل الاحتياج المحلي؟</div>
+    <div class="row" style="padding:16px 22px;font-weight:400">ما الخدمة القائمة حاليًا؟ وما الفجوة التي لم تغطها؟</div>
+    <div class="row" style="padding:16px 22px;font-weight:400">اذكروا رقمًا جمعتموه بأنفسكم. كيف تحققتم منه؟</div>
+    <div class="row" style="padding:16px 22px;font-weight:400">ما الأصل الوقفي أو مصدر الريع؟ ومن الجهة المخوَّلة بإدارته في بلدكم؟</div>
+    <div class="row" style="padding:16px 22px;font-weight:400">لو انخفضت الموارد إلى النصف، فما الذي تُبقونه ولماذا؟</div>
+    <div class="row" style="padding:16px 22px;font-weight:400">ما أضعف افتراض في مبادرتكم؟ وما الدليل الذي قد يغيّر رأيكم؟</div>
+    <div class="row" style="padding:16px 22px;font-weight:400">من يتحمل التشغيل والصيانة بعد السنة الأولى؟ وبكم؟</div>
+  </div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>26</span></div>
+</section>
+
+<!-- 27 -->
+<section class="slide">
+  <div class="top"><div class="eyebrow">المشروع الوقفي</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>كيف نضمن أن المبادرة من فهم الفريق؟</h1>
+  <div style="display:flex;gap:22px;align-items:stretch">
+    <div class="rows" style="flex:1.75;gap:10px">
+      <div class="row"><span class="dot">1</span>إرفاق مصدرين محليين قابلين للتحقق، مع تاريخ الاطلاع.</div>
+      <div class="row"><span class="dot">2</span>مقابلة قصيرة واحدة على الأقل مع مستفيد أو مختص أو جهة محلية.</div>
+      <div class="row"><span class="dot">3</span>ملخص من 3 أسطر لما تعلّمه الفريق من المقابلة.</div>
+      <div class="row"><span class="dot">4</span>تحديد مساهمة كل عضو بوضوح.</div>
+      <div class="row"><span class="dot">5</span>إجابة مباشرة عن سؤال يوجّهه المحكّم لكل عضو.</div>
+      <div class="row"><span class="dot">6</span>ذكر ما لا يعرفه الفريق بعدُ وما يحتاج إلى التحقق.</div>
+    </div>
+    <div class="card gold" style="flex:1"><svg class="ico"><use href="#i-shield"/></svg><div class="ct">قاعدة عادلة</div><div class="cd">يجوز استخدام الأدوات الرقمية للتنظيم والصياغة، لكن لا يجوز اختلاق بيانات أو مقابلات أو مصادر. يجب أن يفهم الفريق كل كلمة يقدّمها.</div></div>
+  </div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>27</span></div>
+</section>
+
+<!-- 28 -->
+<section class="slide mint">
+  <div class="top"><div class="eyebrow">المشروع الوقفي</div><img class="logo" src="daymoma-logo.png" alt="ديمومة"></div>
+  <h1>التحكيم والجوائز</h1>
+  <div style="display:flex;gap:22px;align-items:stretch">
+    <div class="card gold" style="flex:1.7">
+      <div class="ct">الجوائز الفردية</div>
+      <div class="cd">تقيّم اللجنة كل عضو تقييمًا فرديًا من 100 درجة، ومنها جائزة <b style="color:var(--navy)">الأجهزة اللوحية</b> لأفضل المساهمين:</div>
+      <div class="grid g2" style="gap:14px;margin-top:14px">
+        <div class="card" style="display:flex;align-items:center;justify-content:space-between;padding:14px 22px"><span class="cd" style="margin:0">المساهمة الفعلية</span><span class="big" style="font-size:44px">40</span></div>
+        <div class="card" style="display:flex;align-items:center;justify-content:space-between;padding:14px 22px"><span class="cd" style="margin:0">فهم المبادرة والإجابة</span><span class="big" style="font-size:44px">25</span></div>
+        <div class="card" style="display:flex;align-items:center;justify-content:space-between;padding:14px 22px"><span class="cd" style="margin:0">المبادرة والابتكار</span><span class="big" style="font-size:44px">20</span></div>
+        <div class="card" style="display:flex;align-items:center;justify-content:space-between;padding:14px 22px"><span class="cd" style="margin:0">التعاون وتحمّل المسؤولية</span><span class="big" style="font-size:44px">15</span></div>
+      </div>
+    </div>
+    <div class="card" style="flex:1">
+      <div class="ct">جائزة المجموعة</div>
+      <ul class="b"><li>تقيّم اللجنة كل مشروع وفق بطاقة التقييم (100 درجة).</li><li>تُمنح الجائزة بحسب نتيجة التقييم.</li><li>يُكرَّم أعضاء المجموعة المتميزة بشهادة تميّز جماعية.</li></ul>
+    </div>
+  </div>
+  <div class="foot"><span>جمعية ديمومة لخدمة الأوقاف بمنطقة نجران · <b>سفراء الأوقاف | جامعة نجران</b></span><span>28</span></div>
+</section>
+</body>
+</html>
